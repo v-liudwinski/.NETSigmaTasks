@@ -138,4 +138,9 @@ public class Storage
     }
 
     public Product[] GetProducts() => _products;
+
+    public void SortProductsByPrice()
+    {
+        Array.Sort(_products, new ProductComparer());
+    }
 }

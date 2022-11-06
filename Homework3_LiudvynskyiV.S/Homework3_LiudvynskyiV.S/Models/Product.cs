@@ -1,6 +1,8 @@
-﻿namespace Homework3_LiudvynskyiV.S.Models;
+﻿using System.Collections;
 
-public class Product
+namespace Homework3_LiudvynskyiV.S.Models;
+
+public class Product : IComparable // Homework #4
 {
     public Product(double Price)
     {
@@ -13,5 +15,11 @@ public class Product
     {
         var coef = percent / 100;
         Price += Price * coef;
+    }
+
+    public int CompareTo(object? obj)
+    {
+        if (obj is Product product) return Price.CompareTo(product.Price);
+        else throw new ArgumentException("Incorrect value!");
     }
 }
