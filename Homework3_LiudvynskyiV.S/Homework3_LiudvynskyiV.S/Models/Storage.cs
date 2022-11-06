@@ -36,7 +36,7 @@ public class Storage
                 case "1":
                     Console.Write("Put the price: ");
                     var priceStr = Console.ReadLine();
-                    double.TryParse(priceStr, out double meatPrice);
+                    decimal.TryParse(priceStr, out decimal meatPrice);
                     products[i] = new Meat(meatPrice);
                     
                     
@@ -89,7 +89,7 @@ public class Storage
                 case "2":
                     Console.Write("Put the price: ");
                     priceStr = Console.ReadLine();
-                    double.TryParse(priceStr, out double dpPrice);
+                    decimal.TryParse(priceStr, out decimal dpPrice);
                     products[i] = new DairyProducts(dpPrice);
                     
                     Console.Write("Put the year: ");

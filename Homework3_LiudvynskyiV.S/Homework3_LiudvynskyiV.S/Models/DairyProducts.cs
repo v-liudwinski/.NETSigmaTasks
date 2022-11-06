@@ -2,7 +2,7 @@
 
 public class DairyProducts : Product
 {
-    public DairyProducts(double Price) : base(Price)
+    public DairyProducts(decimal Price, double Weight) : base(Price, Weight)
     {
     }
 
@@ -31,11 +31,11 @@ public class DairyProducts : Product
         base.ChangePrice(percent);
         if ((DateTime.Now - ExpirationDate).Days >= 30)
         {
-            Price += Price * 0.3;
+            Price += Price * 0.3m;
         }
         else if ((DateTime.Now - ExpirationDate).Days >= 7)
         {
-            Price += Price * 0.1;
+            Price += Price * 0.1m;
         }
     }
 }

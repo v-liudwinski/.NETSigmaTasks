@@ -4,7 +4,7 @@ namespace Homework3_LiudvynskyiV.S.Models;
 
 public class Meat : Product
 {
-    public Meat(double Price) : base(Price)
+    public Meat(decimal Price, double Weight) : base(Price, Weight)
     {
     }
 
