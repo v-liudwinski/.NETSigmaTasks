@@ -37,7 +37,10 @@ public class Storage
                     Console.Write("Put the price: ");
                     var priceStr = Console.ReadLine();
                     decimal.TryParse(priceStr, out decimal meatPrice);
-                    products[i] = new Meat(meatPrice);
+                    Console.Write("Put the weight: ");
+                    var weightStr = Console.ReadLine();
+                    double.TryParse(weightStr, out double meatWeight);
+                    products[i] = new Meat(meatPrice, meatWeight);
                     
                     
                     Console.WriteLine("Choose the category:\n" +
@@ -90,7 +93,10 @@ public class Storage
                     Console.Write("Put the price: ");
                     priceStr = Console.ReadLine();
                     decimal.TryParse(priceStr, out decimal dpPrice);
-                    products[i] = new DairyProducts(dpPrice);
+                    Console.Write("Put the weight: ");
+                    weightStr = Console.ReadLine();
+                    double.TryParse(weightStr, out double dpWeight);
+                    products[i] = new DairyProducts(dpPrice, dpWeight);
                     
                     Console.Write("Put the year: ");
                     int.TryParse(Console.ReadLine(), out int year);
