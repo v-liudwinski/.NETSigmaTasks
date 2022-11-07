@@ -7,7 +7,7 @@ public class Basket
 
     public Basket(IEnumerable<Product> products)
     {
-        
+        Products = products;
     }
 
     private bool IsCorrectCurrency()
@@ -45,5 +45,13 @@ public class Basket
 
         throw new ArgumentException("In your basket not all products have " +
                                     "the same currencies or weight measures!");
+    }
+
+    public void Print()
+    {
+        foreach (var product in GetBasket())
+        {
+            Console.WriteLine(product.ToString());
+        }
     }
 }
