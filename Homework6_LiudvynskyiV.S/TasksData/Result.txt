@@ -1,0 +1,14 @@
+July:
+12 Holmes 17.07.22 $0.00 114
+7 Watson 16.07.22 $0.00 115
+3 Khlyvniuk 16.07.22 $0.00 115
+August:
+12 Holmes 18.08.22 $10.00 82
+7 Watson 17.08.22 $28.40 83
+3 Khlyvniuk 17.08.22 $0.00 83
+September:
+12 Holmes 17.09.22 $18.00 52
+7 Watson 16.09.22 $35.20 53
+3 Khlyvniuk 16.09.22 $0.00 53
+The inmate with highest debt: Watson
+The flat without electricity: 3
