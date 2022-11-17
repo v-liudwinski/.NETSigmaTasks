@@ -29,6 +29,6 @@ public class Product : IComparable // Homework #4
     public int CompareTo(object? obj)
     {
         if (obj is Product product) return Price.CompareTo(product.Price);
-        else throw new ArgumentException("Incorrect value!");
+        throw new ArgumentException("Incorrect value!");
     }
 }
