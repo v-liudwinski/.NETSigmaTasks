@@ -1,0 +1,3 @@
+Apple,chicken,3
+Amazon,cheese,4
+Google,bread,5
