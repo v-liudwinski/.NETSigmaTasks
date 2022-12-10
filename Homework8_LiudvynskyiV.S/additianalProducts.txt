@@ -1,0 +1,3 @@
+beef,chicken,7,10
+lavash,bread,1,10
+milk,cheese,2,10
