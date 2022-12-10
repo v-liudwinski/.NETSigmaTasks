@@ -4,7 +4,7 @@ using Homework8_LiudvynskyiV.S.Services;
 Action<string> Notify = Console.WriteLine;
 var rootPath = @"D:\VisualStudio\.NETSigmaTasks\Homework8_LiudvynskyiV.S\request.txt";
 var resultPath = @"D:\VisualStudio\.NETSigmaTasks\Homework8_LiudvynskyiV.S\response.txt";
-var additianalProductsPath = @"D:\VisualStudio\.NETSigmaTasks\Homework8_LiudvynskyiV.S\additianal.txt";
+var additionalProductsPath = @"D:\VisualStudio\.NETSigmaTasks\Homework8_LiudvynskyiV.S\additianal.txt";
 
 var products = new List<Product>
 {
@@ -28,7 +28,7 @@ var products = new List<Product>
     }
 };
 IProductService productService = new ProductService(products);
-IFileHandler fileHandler = new FileHandler(rootPath, resultPath, productService);
+IFileHandler fileHandler = new FileHandler(rootPath, resultPath, additionalProductsPath, productService);
 var storageOperations = new StorageOperations();
 fileHandler.PurchaseSuccessful += Notify;
 fileHandler.PurchaseFailed += Notify;

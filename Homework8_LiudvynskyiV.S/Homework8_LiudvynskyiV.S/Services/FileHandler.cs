@@ -10,12 +10,16 @@ public class FileHandler : IFileHandler
     private readonly IProductService _productService;
     private readonly string rootPath;
     private readonly string resultPath;
+    private readonly string additionalProductsPath;
     private List<Purchase> _purchases;
+    private List<(string,Product)> _additionalProducts;
 
-    public FileHandler(string rootPath, string resultPath, IProductService productService)
+    public FileHandler(string rootPath, string resultPath,
+        string additionalProductsPath, IProductService productService)
     {
         this.rootPath = rootPath;
         this.resultPath = resultPath;
+        this.additionalProductsPath = additionalProductsPath;
         _productService = productService;
     }
 
@@ -33,6 +37,22 @@ public class FileHandler : IFileHandler
             .Where(x => x.Quantity > 0 
                         && !string.IsNullOrWhiteSpace(x.ProductName) 
                         && !string.IsNullOrWhiteSpace(x.FirmName))
+            .ToList();
+        
+        file = File.ReadAllLines(additionalProductsPath);
+        _additionalProducts = file.Select(x => x
+                .Split(','))
+            .Select(x => 
+                (
+                    x[1], 
+                    new Product
+                    {
+                        Name = x[0],
+                        Price = decimal.TryParse(x[2], out var price) ? price : 0,
+                        Quantity = int.TryParse(x[3], out var qnt) ? qnt : 0
+                    }
+                )
+            )
             .ToList();
     }
 
@@ -71,7 +91,6 @@ public class FileHandler : IFileHandler
                     .GetProductByName(x.ProductName)!.Quantity > x.Quantity;
             }
             return false;
-        }) 
-               && _purchases.All(x => _productService.DoesProductWithCurrentNameExist(x.ProductName));
+        });
     }
 }
