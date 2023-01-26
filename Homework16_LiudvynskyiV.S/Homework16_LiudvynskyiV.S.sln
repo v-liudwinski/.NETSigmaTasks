@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework16_LiudvynskyiV.S", "Homework16_LiudvynskyiV.S\Homework16_LiudvynskyiV.S.csproj", "{03DE4E86-EF82-4BC3-979B-5152E6A9A1AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicesTetst", "ServicesTetst\ServicesTetst.csproj", "{B991AA32-F135-497F-B166-F457A6B2B33C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03DE4E86-EF82-4BC3-979B-5152E6A9A1AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03DE4E86-EF82-4BC3-979B-5152E6A9A1AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03DE4E86-EF82-4BC3-979B-5152E6A9A1AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03DE4E86-EF82-4BC3-979B-5152E6A9A1AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B991AA32-F135-497F-B166-F457A6B2B33C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B991AA32-F135-497F-B166-F457A6B2B33C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B991AA32-F135-497F-B166-F457A6B2B33C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B991AA32-F135-497F-B166-F457A6B2B33C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+﻿namespace Homework17_LiudvynskyiV.S.Models.Domain;
+
+public class Cinema : IEntity
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string Address { get; set; }
+    // Navigation property
+    public ICollection<Hall> Halls { get; set; }
+}
