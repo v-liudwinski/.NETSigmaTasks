@@ -7,10 +7,12 @@ namespace Homework16_LiudvynskyiV.S.Controllers;
 public class UserController
 {
     private readonly IPasswordValidator _passwordValidator;
+    private readonly IEmailValidator _emailValidator;
 
-    public UserController(IPasswordValidator passwordValidator)
+    public UserController(IPasswordValidator passwordValidator, IEmailValidator emailValidator)
     {
         _passwordValidator = passwordValidator;
+        _emailValidator = emailValidator;
     }
 
     public User CreateUser(CreateUserDTO userDto)
@@ -34,6 +36,14 @@ public class UserController
             message = "Invalid password!";
             return false;
         }
+
+        var isEmailValid = _emailValidator.IsEmailValid(userDto.Email);
+        if (!isEmailValid)
+        {
+            message = "Invalid email!";
+            return false;
+        }
+        
         message = "Success!";
         return true;
     }
