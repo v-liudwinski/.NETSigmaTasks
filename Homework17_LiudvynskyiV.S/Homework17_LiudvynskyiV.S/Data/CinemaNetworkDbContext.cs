@@ -12,6 +12,6 @@ public class CinemaNetworkDbContext : DbContext
     public DbSet<Showtime> Showtimes { get; set; }
     public DbSet<Hall> Halls { get; set; }
     public DbSet<Seat> Seats { get; set; }
-    public DbSet<User> Users { get; set; }
+    public virtual DbSet<User> Users { get; set; }
     public DbSet<Ticket> Tickets { get; set; }
 }

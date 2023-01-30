@@ -2,7 +2,9 @@ using FluentValidation.AspNetCore;
 using Homework17_LiudvynskyiV.S.Data;
 using Homework17_LiudvynskyiV.S.Repositories;
 using Homework17_LiudvynskyiV.S.Repositories.Interfaces;
+using Homework17_LiudvynskyiV.S.Validators;
 using Microsoft.EntityFrameworkCore;
+using IEmailValidator = FluentValidation.Validators.IEmailValidator;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,7 @@ builder.Services.AddScoped<ISeatRepository, SeatRepository>();
 builder.Services.AddScoped<IShowtimeRepository, ShowtimeRepository>();
 builder.Services.AddScoped<ITicketRepository, TicketRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserEmailValidator, EmailValidator>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
